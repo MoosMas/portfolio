@@ -1,5 +1,6 @@
 import './bootstrap';
-import 'fullview';
+import 'fullview/dist/fullview.js';
+import 'fullview/dist/fullview.css';
 
 $(document).ready(function () {
 	var fv = $("#fullview").fullView({
