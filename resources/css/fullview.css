@@ -57,7 +57,7 @@ form label {
 /* Override Styles */
 #fv-dots ul li a span {
 	background-color: #888888;
-	border-radius: 0;
+	border-radius: 0 !important;
 	transition: all 0.5s ease;
 }
 
