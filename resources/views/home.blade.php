@@ -10,7 +10,7 @@
 	<link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
 	<!-- Vite Assets -->
-	@vite(['resources/css/fullview.css', 'resources/js/fullview.js'])
+	@vite(['resources/css/app.css', 'resources/css/fullview.css', 'resources/js/fullview.js'])
 </head>
 <body class="antialiased">
 	<div id="fullview">
