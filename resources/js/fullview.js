@@ -1,4 +1,3 @@
-import './bootstrap';
 import 'fullview/dist/fullview.js';
 import 'fullview/dist/fullview.css';
 
