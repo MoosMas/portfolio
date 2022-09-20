@@ -18,6 +18,7 @@
 			<div class="glass welcome parallax">
 				<h2>Sam's Brandende Portfolio</h2>
 			</div>
+			<a class="icon-scroll" id="down"></a>
 		</div>
 		<div id="section2" data-tooltip="Section 2 Title">
 			<h2>Section 2</h2>
