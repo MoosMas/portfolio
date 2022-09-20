@@ -15,8 +15,9 @@
 <body class="antialiased">
 	<div id="fullview">
 		<div id="section1" class="active" data-tooltip="Section 1 Title">
-			<h2>Section 1</h2>
-			<button title="Down" id="down"><span>Click Here</span></button>
+			<div class="glass welcome parallax">
+				<h2>Sam's Brandende Portfolio</h2>
+			</div>
 		</div>
 		<div id="section2" data-tooltip="Section 2 Title">
 			<h2>Section 2</h2>
