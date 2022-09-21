@@ -39,9 +39,14 @@
 
 .welcome {
 	color: white;
-	width: 50vw;
-	height: 20vw;
-	padding: 20px 50px;
+	max-width: 90%;
+	padding: 0 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: clamp(400px, 40vh, 900px);
+}
+
 .social-icons a {
 	color: black;
 	font-size: 4rem;
