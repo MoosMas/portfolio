@@ -20,6 +20,7 @@
 	background-image: url('/public/img/fire.gif');
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .welcome {
@@ -33,6 +34,7 @@
 	position: absolute;
 	left: 50%;
 }
+
 .icon-scroll {
 	width: 40px;
 	height: 70px;
@@ -45,6 +47,7 @@
 	cursor: pointer;
 	position: sticky;
 }
+
 .icon-scroll:before {
 	content: '';
 	width: 8px;
