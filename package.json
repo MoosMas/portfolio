@@ -12,6 +12,7 @@
         "vite": "^3.0.0"
     },
     "dependencies": {
+        "bootstrap-icons": "^1.9.1",
         "fullview": "^1.1.2",
         "jquery": "^3.6.1",
         "vanilla-tilt": "^1.7.2"
