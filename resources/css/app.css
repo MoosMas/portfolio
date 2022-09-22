@@ -43,7 +43,7 @@
 	padding: 0 30px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	height: clamp(400px, 40vh, 900px);
 }
 
