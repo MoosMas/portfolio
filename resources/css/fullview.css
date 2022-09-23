@@ -4,15 +4,14 @@ body {
 	background: #ececec;
 }
 
-#fullview > div {
-	background-color: #eee;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.688rem;
-	flex-direction: column;
-	padding: 25px;
-}
+/*#fullview > div {*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	font-size: 1.688rem;*/
+/*	flex-direction: column;*/
+/*	padding: 25px;*/
+/*}*/
 
 #fullview > div:nth-child(even) {
 	background-color: #282c34;
