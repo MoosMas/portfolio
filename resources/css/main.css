@@ -1,10 +1,4 @@
-#section1 {
-	background-image: url('/public/img/topography-background.svg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: top;
-}
+/* ---- General Styling ---- */
 
 .glass {
 	background: rgba(255, 255, 255, 0.25);
@@ -101,4 +95,38 @@
 		opacity: 0;
 		transform: translateY(46px);
 	}
+}
+
+/* ---- Section Styling ---- */
+
+#fullview > #section1 {
+	background-image: url('/public/img/topography-background.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: top;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.688rem;
+	flex-direction: column;
+	padding: 25px;
+}
+
+#section2, #section3, #section4 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 1.688rem;
+	flex-direction: column;
+	padding: 25px;
+}
+
+#fullview .container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#fullview h2 {
+	text-align: center;
 }
