@@ -34,22 +34,16 @@
 			<a class="icon-scroll" id="down"></a>
 		</div>
 		<div id="section2" data-tooltip="Section 2 Title">
-			<h2>Section 2</h2>
-			<div class="form">
-				<form>
-					<label for="select">Choose Section To Scroll</label>
-					<select name="section" id="select">
-						<option value="0">Section: 1</option>
-						<option value="1">Section: 2</option>
-						<option value="2">Section: 3</option>
-						<option value="3">Section: 4</option>
-					</select>
-				</form>
+			<div class="container">
+				<h2>Projecten</h2>
+				
 			</div>
 		</div>
+		
 		<div id="section3" data-tooltip="Section 3 Title">
 			<h2>Section 3</h2>
 		</div>
+		
 		<div id="section4" data-tooltip="Section 4 Title">
 			<h2>Section 4</h2>
 		</div>
