@@ -16,7 +16,7 @@
 	<div id="fullview">
 		<div id="section1" class="active" data-tooltip="Section 1 Title">
 			<div class="glass welcome parallax">
-				<h2>Sam's Brandende Portfolio</h2>
+				<h1>Sam's Brandende Portfolio</h1>
 
 				<div class="parallax-inner social-icons">
 					<a href="https://github.com/MoosMas" target="_blank">
