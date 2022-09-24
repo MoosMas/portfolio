@@ -97,6 +97,13 @@
 	}
 }
 
+.card-grid {
+	border-radius: 30px;
+	background: #282c34;
+	box-shadow: inset 20px 20px 40px #22252c,
+	inset -20px -20px 40px #2e333c;
+}
+
 /* ---- Section Styling ---- */
 
 #fullview > #section1 {
