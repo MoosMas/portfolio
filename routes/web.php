@@ -16,7 +16,7 @@ use \App\Http\Controllers\ProjectController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
