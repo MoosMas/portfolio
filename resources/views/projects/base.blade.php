@@ -13,6 +13,9 @@
 
 </head>
 <body class="antialiased">
+
+	@include('components.projects-nav')
+	
 	@yield('content')
 </body>
 </html>
