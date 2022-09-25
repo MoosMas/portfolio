@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->boolean('is_highlighted')->default(false);
+            $table->boolean('is_highlighted')->nullable()->default(false);
             $table->string('image_path');
             $table->timestamps();
         });
