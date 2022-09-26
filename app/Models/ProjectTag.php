@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class ProjectTag extends Model
 {
     use HasFactory;
 
-    public function projects()
+    public function tags()
     {
-        return $this->belongsToMany(Project::class);
+        return $this->hasOne(Tag::class, 'tag_id');
     }
 }
