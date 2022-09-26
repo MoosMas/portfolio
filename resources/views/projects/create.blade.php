@@ -43,8 +43,20 @@
 				@enderror
 			</div>
 
+			<div class="form-group mb-3">
+				<label for="tags" class="form-label">Tags</label>
+				<select name="tags" id="tags" class="form-control select2-tags" multiple></select>
+			</div>
+
 			<input type="submit" value="Aanmaken" class="btn btn-primary">
 		</form>
 	</div>
+	
+	<script type="module">
+		$(".select2-tags").select2({
+			tags: true,
+			tokenSeparators: [',', ' ']
+		})
+	</script>
 
 @endsection
