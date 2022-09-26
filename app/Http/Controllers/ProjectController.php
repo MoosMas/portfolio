@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,40 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'images' => 'required',
+            'images.*' => 'image|mimes:png,jpg,jpeg|max:2048'
+        ]);
+
+        $project = new Project();
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->is_highlighted = $request->highlight;
+        $project->save();
+
+        if($request->hasfile('images'))
+        {
+            foreach($request->file('images') as $key => $file)
+            {
+                $name = $file->getClientOriginalName();
+                
+                $path = $file->storeAs('images', $file->getClientOriginalName());
+
+                $image = new Image();
+                $image->name = $name;
+                $image->path = $path;
+                $image->project_id = $project->id;
+                $image->save();
+
+            }
+        }
+        
+        return redirect()->route('projects.index')
+            ->with('success', 'Project aangemaakt');
+
+        
     }
 
     /**
