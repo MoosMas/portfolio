@@ -56,7 +56,7 @@ class ProjectController extends Controller
             {
                 $name = $file->getClientOriginalName();
                 
-                $path = $file->storeAs('images', $file->getClientOriginalName());
+                $path = $file->storeAs('images', $file->hashName());
 
                 $image = new Image();
                 $image->name = $name;
