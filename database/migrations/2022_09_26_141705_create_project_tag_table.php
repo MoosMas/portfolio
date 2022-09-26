@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('project_tag', function (Blueprint $table) {
             $table->id();
-            $table->string('tag');
-            $table->string('background_color');
-            $table->string('text_color');
+            $table->foreignId('project_id')
+                ->references('id')
+                ->on('projects');
+            $table->foreignId('tag_id')
+                ->references('id')
+                ->on('tags');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('project_tag');
     }
 };
