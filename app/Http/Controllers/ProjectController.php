@@ -63,7 +63,15 @@ class ProjectController extends Controller
                 $image->path = $path;
                 $image->project_id = $project->id;
                 $image->save();
-
+            }
+        }
+        
+        if($request->filled('tags')) {
+            foreach ($request->tags as $tag) {
+                $projectTag = new ProjectTag();
+                $projectTag->project_id = $project->id;
+                $projectTag->tag_id = $tag;
+                $projectTag->save();
             }
         }
         
