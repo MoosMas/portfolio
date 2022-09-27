@@ -9,7 +9,7 @@
 			<div class="form-group mb-3">
 
 				<label for="title" class="form-label">Titel</label>
-				<input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror">
+				<input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" value="{{old('title')}}">
 				@error('title')
 					<span class="invalid-feedback" role="alert">
                         {{ $message }}
@@ -19,7 +19,7 @@
 
 			<div class="form-group mb-3">
 				<label for="description" class="form-label">Beschrijving</label>
-				<textarea name="description" id="description" cols="30" rows="4" class="form-control @error('description') is-invalid @enderror"></textarea>
+				<textarea name="description" id="description" cols="30" rows="4" class="form-control @error('description') is-invalid @enderror">{{old('description')}}</textarea>
 				@error('description')
 				<span class="invalid-feedback" role="alert">
                         {{ $message }}
@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="form-check form-switch mb-3">
-				<input type="checkbox" name="highlight" id="highlight" class="form-check-input" role="switch">
+				<input type="checkbox" name="highlight" id="highlight" class="form-check-input" role="switch" value="{{old('highlight')}}">
 				<label for="highlight" class="form-check-label">Highlight project?</label>
 			</div>
 
@@ -45,7 +45,7 @@
 
 			<div class="form-group mb-3">
 				<label for="tags" class="form-label">Tags</label>
-				<select name="tags" id="tags" class="form-control select2-tags" multiple></select>
+				<select name="tags[]" id="tags" class="form-control select2-tags" multiple></select>
 			</div>
 
 			<input type="submit" value="Aanmaken" class="btn btn-primary">
@@ -54,9 +54,14 @@
 	
 	<script type="module">
 		$(".select2-tags").select2({
-			tags: true,
-			tokenSeparators: [',', ' ']
-		})
+			tags: false,
+			tokenSeparators: [',', ' '],
+			data: {!! json_encode($tags) !!}
+		});
+		
+		let oldInput = {!! json_encode(old('tags') ?? []) !!};
+		$(".select2-tags").val(oldInput);
+		$('.select2-tags').trigger('change');
 	</script>
 
 @endsection
