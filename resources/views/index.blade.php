@@ -43,38 +43,48 @@
 				<div class="card-grid p-4 text-dark">
 					<div class="row gx-5">
 						@foreach($projects as $project)
-							<div class="col-sm-3 mb-2">
+							<div class="col-md-4 mb-2">
 								<div class="card">
-									<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+									@if(count($project->images) > 1)
+										<div id="carouselExampleIndicators" class="carousel slide card-img-top" data-bs-ride="true">
 
-										<div class="carousel-indicators">
-											@for($i = 0; $i < count($project->images); $i++)
-												<button type="button" data-bs-target="#carouselExampleIndicators"
-												        data-bs-slide-to="{{$i}}" @if($i == 0) class="active"
-												        aria-current="true" @endif
-												        aria-label="Slide {{$i}}"></button>
-											@endfor
-										</div>
-										<div class="carousel-inner">
-											@for($i = 0; $i < count($project->images); $i++)
-												<div class="carousel-item @if($i == 0) active @endif">
-													<img src="{{$project->images[$i]->path}}" class="d-block w-100"
-													     alt="...">
-												</div>
-											@endfor
+											<div class="carousel-indicators">
+												@for($i = 0; $i < count($project->images); $i++)
+													<button type="button" data-bs-target="#carouselExampleIndicators"
+													        data-bs-slide-to="{{$i}}" @if($i == 0) class="active"
+													        aria-current="true" @endif
+													        aria-label="Slide {{$i}}"></button>
+												@endfor
+											</div>
+											<div class="carousel-inner">
+												@for($i = 0; $i < count($project->images); $i++)
+													<div class="carousel-item @if($i == 0) active @endif">
+														<img src="{{$project->images[$i]->path}}" class="d-block w-100"
+														     alt="...">
+													</div>
+												@endfor
+											</div>
+
+											<button class="carousel-control-prev" type="button"
+											        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="visually-hidden">Previous</span>
+											</button>
+											<button class="carousel-control-next" type="button"
+											        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="visually-hidden">Next</span>
+											</button>
 										</div>
 
-										<button class="carousel-control-prev" type="button"
-										        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Previous</span>
-										</button>
-										<button class="carousel-control-next" type="button"
-										        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-											<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Next</span>
-										</button>
-									</div>
+									@else
+
+										<div class="slide">
+											<img src="{{$project->images[0]->path}}" alt=""
+											     class="card-img-top" >
+										</div>
+
+									@endif
 									<div class="card-body">
 										<h5 class="card-title">{{$project->title}}</h5>
 										<p class="card-text">
