@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Project;
+use App\Models\ProjectTag;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -26,7 +28,14 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projects.create');
+        $allTags = Tag::all();
+
+        $tags = $allTags->map(function ($tag) {
+            return ['id' => $tag->id, 'text' => $tag->tag];
+        })->toArray();
+        
+        return view('projects.create')
+            ->with(['tags'=> $tags]);
     }
 
     /**
