@@ -58,6 +58,7 @@
 		$(".select2-tags").select2({
 			tags: false,
 			tokenSeparators: [',', ' '],
+			theme: 'bootstrap-5',
 			data: {!! json_encode($tags) !!}
 		}).val(oldInput).trigger('change');
 	</script>
