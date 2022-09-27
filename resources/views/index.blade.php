@@ -104,8 +104,42 @@
 		
 		<div id="section3" data-tooltip="Section 3 Title">
 			<h2>Section 3</h2>
+
+			<div class="container-lg h-100">
+				<h2 class="mb-3">Over mij</h2>
+
+				<div class="container h-75 p-5 rounded shadow">
+					<div class="px-5">
+						<p>
+							Mijn naam is Sam Brands en ik zit nu in het derde jaar van de MBO 4 opleiding software
+							development bij Curio in Breda.
+						</p>
+						<p>
+							Voor mijn opleiding leer en gebruik ik verschillende talen en technieken. Zo heb ik onder
+							anderen in HTML, CSS, JavaScript en PHP gewerkt, maar ook in andere talen zoals Python en
+							C#.
+						</p>
+						<p>
+							Voor het derde jaar heb ik de specialisatie WEB gekozen, wat inhoudt dat ik me voornamelijk
+							ga
+							richten op het bouwen van websites en webapps... Hierbij maak ik voornamelijk gebruik van
+							het
+							PHP-framework Laravel, samen met HTML, CSS en JavaScript.
+						</p>
+						<div class="d-flex justify-content-center">
+							<a href="https://github.com/MoosMas" target="_blank">
+								<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MoosMas&layout=compact&hide=typescript,shell&langs_count=6&bg_color=ececec"
+								     alt="">
+							</a>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
 		</div>
 		
+
 		<div id="section4" data-tooltip="Section 4 Title">
 			<h2>Section 4</h2>
 		</div>
