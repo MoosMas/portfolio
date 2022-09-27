@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProjectTag extends Model
 {
     use HasFactory;
+    protected $table = 'project_tag';
 
     public function tags()
     {
