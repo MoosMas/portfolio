@@ -21,13 +21,13 @@
 				<h1>Sam's Brandende Portfolio</h1>
 
 				<div class="parallax-inner social-icons">
-					<a href="https://github.com/MoosMas" target="_blank">
+					<a href="https://github.com/MoosMas" target="_blank" class="link-dark">
 						<i class="bi bi-github inner"></i>
 					</a>
-					<a href="https://www.linkedin.com/in/sambrands/" target="_blank">
+					<a href="https://www.linkedin.com/in/sambrands/" target="_blank" class="link-dark">
 						<i class="bi bi-linkedin"></i>
 					</a>
-					<a href="javascript:function(e){e.preventDefault();}">
+					<a href="javascript:function(e){e.preventDefault();}" class="link-dark">
 						<i class="bi bi-envelope-fill"></i>
 					</a>
 				</div>
