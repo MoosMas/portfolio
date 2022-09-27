@@ -41,12 +41,14 @@
 			<div class="container-lg">
 				<h2 class="mb-3">Projecten</h2>
 				<div class="card-grid p-4 text-dark">
-					<div class="row gx-5">
+					<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4">
+
 						@foreach($projects as $project)
-							<div class="col-md-4 mb-2">
-								<div class="card">
+							<div class="col">
+								<div class="card h-100" style="width: 18rem;">
 									@if(count($project->images) > 1)
-										<div id="carouselExampleIndicators" class="carousel slide card-img-top" data-bs-ride="true">
+										<div id="carouselExampleIndicators" class="carousel slide card-img-top"
+										     data-bs-ride="true">
 
 											<div class="carousel-indicators">
 												@for($i = 0; $i < count($project->images); $i++)
@@ -81,7 +83,7 @@
 
 										<div class="slide">
 											<img src="{{$project->images[0]->path}}" alt=""
-											     class="card-img-top" >
+											     class="card-img-top">
 										</div>
 
 									@endif
