@@ -53,15 +53,13 @@
 	</div>
 	
 	<script type="module">
+		let oldInput = {!! json_encode(old('tags') ?? []) !!};
+		
 		$(".select2-tags").select2({
 			tags: false,
 			tokenSeparators: [',', ' '],
 			data: {!! json_encode($tags) !!}
-		});
-		
-		let oldInput = {!! json_encode(old('tags') ?? []) !!};
-		$(".select2-tags").val(oldInput);
-		$('.select2-tags').trigger('change');
+		}).val(oldInput).trigger('change');
 	</script>
 
 @endsection
