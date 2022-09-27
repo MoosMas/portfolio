@@ -137,8 +137,45 @@
 			</div>
 		</div>
 
+			<div class="container-lg h-100">
+				<h2 class="mb-3">Contact</h2>
 
+				<div class="container h-75 p-5 rounded shadow d-flex justify-content-between">
+					<form action="" method="POST">
+						@csrf
+						<div class="form-group mb-3">
+							<label for="name" class="form-label">Naam</label>
+							<input type="text" name="name" id="name" class="form-control">
+						</div>
+						<div class="form-group mb-3">
+							<label for="email" class="form-label">Email</label>
+							<input type="email" name="email" id="name" class="form-control">
+						</div>
+						<div class="form-group mb-3">
+							<label for="message" class="form-label">Bericht</label>
+							<textarea name="message" id="message" cols="30" rows="4" class="form-control"></textarea>
+						</div>
 
+						<input type="submit" value="Versturen" class="btn btn-primary">
+
+					</form>
+					<div class="w-50">
+						<p>
+							Neem gerust contact op bij vragen of als je een idee hebt voor een project. Dat kan door het
+							formulier hiernaast in te vullen of contact op te nemen via een van de platforms hieronder.
+						</p>
+						<div class="parallax-inner social-icons">
+							<a href="https://github.com/MoosMas" target="_blank" class="link-light">
+								<i class="bi bi-github inner"></i>
+							</a>
+							<a href="https://www.linkedin.com/in/sambrands/" target="_blank" class="link-light">
+								<i class="bi bi-linkedin"></i>
+							</a>
+							<a href="javascript:function(e){e.preventDefault();}" class="link-light">
+								<i class="bi bi-envelope-fill"></i>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

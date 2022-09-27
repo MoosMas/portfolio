@@ -107,6 +107,10 @@
 	height: 160px;
 }
 
+#section4 .social-icons a:hover {
+	transform: scale(1.1);
+}
+
 /* ---- Section Styling ---- */
 
 #fullview > #section1 {
