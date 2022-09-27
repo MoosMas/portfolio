@@ -15,7 +15,10 @@ use \App\Http\Controllers\ProjectController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $projects = \App\Models\Project::all();
+    
+    return view('index')
+        ->with(['projects'=>$projects]);
 })->name('home');
 
 Route::get('/dashboard', function () {
