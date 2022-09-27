@@ -140,20 +140,48 @@
 			<div class="container-lg h-100">
 				<h2 class="mb-3">Contact</h2>
 
-				<div class="container h-75 p-5 rounded shadow d-flex justify-content-between">
-					<form action="" method="POST">
+				<div class="container p-5 rounded shadow d-flex justify-content-between">
+					<form action="{{route('contacts.store')}}" method="POST" id="contact-form">
 						@csrf
-						<div class="form-group mb-3">
+						<div class="form-group mb-2">
 							<label for="name" class="form-label">Naam</label>
-							<input type="text" name="name" id="name" class="form-control">
+							<input type="text" name="name" id="name"
+							       class="form-control @error('name') is-invalid @enderror">
+							@error('name')
+							<span class="invalid-feedback" role="alert">
+                                    {{ $message }}
+                            </span>
+							@enderror
 						</div>
-						<div class="form-group mb-3">
+						<div class="form-group mb-2">
 							<label for="email" class="form-label">Email</label>
-							<input type="email" name="email" id="name" class="form-control">
+							<input type="email" name="email" id="name"
+							       class="form-control @error('email') is-invalid @enderror">
+							@error('email')
+							<span class="invalid-feedback" role="alert">
+                                    {{ $message }}
+                            </span>
+							@enderror
 						</div>
-						<div class="form-group mb-3">
+						<div class="form-group mb-2">
+							<label for="subject" class="form-label">Onderwerp</label>
+							<input type="text" name="subject" id="subject"
+							       class="form-control @error('subject') is-invalid @enderror">
+							@error('subject')
+							<span class="invalid-feedback" role="alert">
+                                    {{ $message }}
+                            </span>
+							@enderror
+						</div>
+						<div class="form-group mb-2">
 							<label for="message" class="form-label">Bericht</label>
-							<textarea name="message" id="message" cols="30" rows="4" class="form-control"></textarea>
+							<textarea name="message" id="message" cols="30" rows="4"
+							          class="form-control @error('message') is-invalid @enderror"></textarea>
+							@error('message')
+							<span class="invalid-feedback" role="alert">
+                                    {{ $message }}
+                            </span>
+							@enderror
 						</div>
 
 						<input type="submit" value="Versturen" class="btn btn-primary">

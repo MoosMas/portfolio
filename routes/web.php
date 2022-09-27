@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\ProjectController;
+use \App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,10 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware'=>'auth'], function(){
     Route::resource('projects', ProjectController::class);
+});
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::resource('contacts', ContactController::class);
 });
 
 require __DIR__.'/auth.php';
