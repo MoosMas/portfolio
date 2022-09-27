@@ -9,6 +9,8 @@
 	<!-- Fonts -->
 	<link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
 	<!-- Vite Assets -->
 	@vite(['resources/css/main.css', 'resources/css/fullview.css', 'resources/js/main.js', 'resources/js/fullview.js'])
 </head>
