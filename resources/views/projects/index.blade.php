@@ -53,7 +53,9 @@
 
 							@endif
 							<div class="card-body">
-								<h5 class="card-title">{{$project->title}}</h5>
+								<h5 class="card-title">
+									<a href="{{route('projects.edit', $project->id)}}">{{$project->title}}</a>
+								</h5>
 								<p class="card-text">
 									{{$project->description}}
 								</p>
