@@ -93,6 +93,18 @@
 											{{$project->description}}
 										</p>
 									</div>
+
+									<div class="card-footer row row-cols-auto gx-2">
+										@foreach($project->tags as $tag)
+
+											<div class="col">
+												<small class="rounded p-1 col"
+												       style="background-color: {{$tag->background_color}}; color: {{$tag->text_color}}">
+													{{$tag->tag}}
+												</small></div>
+
+										@endforeach
+									</div>
 								</div>
 							</div>
 
