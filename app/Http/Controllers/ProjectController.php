@@ -109,7 +109,14 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::find($id);
+
+        $allTags = $this->formatTags(Tag::all());
+        
+        $projectTags = $this->formatTags($project->tags);
+        
+        return view('projects.edit')
+            ->with(['project'=>$project, 'projectTags'=>$projectTags, 'allTags'=>$allTags]);
     }
 
     /**
