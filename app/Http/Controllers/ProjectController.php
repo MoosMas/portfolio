@@ -30,9 +30,7 @@ class ProjectController extends Controller
     {
         $allTags = Tag::all();
 
-        $tags = $allTags->map(function ($tag) {
-            return ['id' => $tag->id, 'text' => $tag->tag];
-        })->toArray();
+        $tags = $this->formatTags($allTags);
         
         return view('projects.create')
             ->with(['tags'=> $tags]);
@@ -140,5 +138,12 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         //
+    }
+    
+    public function formatTags($tags)
+    {
+        return $tags->map(function ($tag) {
+            return ['id' => $tag->id, 'text' => $tag->tag];
+        })->toArray();
     }
 }
