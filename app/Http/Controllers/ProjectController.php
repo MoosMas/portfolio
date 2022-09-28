@@ -7,6 +7,7 @@ use App\Models\Project;
 use App\Models\ProjectTag;
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -126,7 +127,66 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'images' => 'nullable',
+            'images.*' => 'image|mimes:png,jpg,jpeg|max:2048'
+        ]);
+        
+        $allTags = Tag::all();
+        $project = Project::find($id);
+        
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->is_highlighted = $request->highlight;
+        $project->save();
+
+        if($request->hasfile('images'))
+        {
+            foreach($request->file('images') as $key => $file)
+            {
+                $name = $file->getClientOriginalName();
+
+                $path = $file->storeAs('images', $file->hashName());
+
+                $image = new Image();
+                $image->name = $name;
+                $image->path = $path;
+                $image->project_id = $project->id;
+                $image->save();
+            }
+        }
+
+        if($request->filled('tags')) {
+            
+            foreach ($allTags as $tag) {     
+                
+                // Check if project has tag
+                if ($project->tags->contains('id', $tag->id)){
+                    if (!in_array($tag->id, $request->tags)){
+                        // Tag link verwijderen
+                        $linkedTag = DB::table('project_tag')
+                            ->where('project_id', '=', $project->id)
+                            ->where('tag_id', '=', $tag->id)
+                            ->delete();
+                    }
+                }
+                // If project doesn't have tag
+                else {
+                    if (in_array($tag->id, $request->tags)){
+                        // Tag toevoegen aan project
+                        $projectTag = new ProjectTag();
+                        $projectTag->project_id = $project->id;
+                        $projectTag->tag_id = $tag->id;
+                        $projectTag->save();
+                    }
+                }
+            }
+        }
+
+        return redirect()->route('projects.index')
+            ->with('success', 'Project aangemaakt');
     }
 
     /**
