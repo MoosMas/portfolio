@@ -16,7 +16,7 @@
 </head>
 <body class="antialiased">
 	<div id="fullview">
-		<div id="section1" class="active" data-tooltip="Section 1 Title">
+		<div id="section1" class="active" data-tooltip="Home">
 			<div class="glass welcome parallax">
 				<h1>Sam's Brandende Portfolio</h1>
 
@@ -35,9 +35,8 @@
 			</div>
 			<a class="icon-scroll" id="down"></a>
 		</div>
-		<div id="section2" data-tooltip="Section 2 Title">
 
-		<div id="section2" class="active" data-tooltip="Section 2 Title">
+		<div id="section2" data-tooltip="Projecten">
 			<div class="container-lg">
 				<h2 class="mb-3">Projecten</h2>
 				<div class="card-grid p-4 text-dark">
@@ -113,10 +112,8 @@
 				</div>
 			</div>
 		</div>
-		
-		<div id="section3" data-tooltip="Section 3 Title">
-			<h2>Section 3</h2>
 
+		<div id="section3" data-tooltip="Over mij">
 			<div class="container-lg h-100">
 				<h2 class="mb-3">Over mij</h2>
 
@@ -149,6 +146,7 @@
 			</div>
 		</div>
 
+		<div id="section4" data-tooltip="Contact">
 			<div class="container-lg h-100">
 				<h2 class="mb-3">Contact</h2>
 
@@ -218,11 +216,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		
-
-		<div id="section4" data-tooltip="Section 4 Title">
-			<h2>Section 4</h2>
 		</div>
 	</div>
 
