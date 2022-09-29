@@ -131,7 +131,7 @@
 						<p>
 							Voor het derde jaar heb ik de specialisatie WEB gekozen, wat inhoudt dat ik me voornamelijk
 							ga
-							richten op het bouwen van websites en webapps... Hierbij maak ik voornamelijk gebruik van
+							richten op het bouwen van websites en webapps. Hierbij maak ik voornamelijk gebruik van
 							het
 							PHP-framework Laravel, samen met HTML, CSS en JavaScript.
 						</p>
