@@ -211,7 +211,7 @@
 							<a href="https://www.linkedin.com/in/sambrands/" target="_blank" class="link-light">
 								<i class="bi bi-linkedin"></i>
 							</a>
-							<a href="javascript:function(e){e.preventDefault();}" class="link-light">
+							<a href="javascript:e.preventDefault();" class="link-light">
 								<i class="bi bi-envelope-fill"></i>
 							</a>
 						</div>
