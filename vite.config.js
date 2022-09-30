@@ -5,13 +5,15 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-				'resources/css/app.css',
-				'resources/css/fullview.css',
-				'resources/js/app.js',
-				'resources/js/fullview.js',
-				'node_modules/fullview/dist/fullview.css',
-				'node_modules/fullview/dist/fullview.js'
-			],
+                'resources/css/main.css',
+                'resources/css/app.css',
+                'resources/css/fullview.css',
+                'resources/js/main.js',
+                'resources/js/app.js',
+                'resources/js/fullview.js',
+                'node_modules/fullview/dist/fullview.css',
+                'node_modules/fullview/dist/fullview.js'
+            ],
             refresh: true,
         }),
     ],
